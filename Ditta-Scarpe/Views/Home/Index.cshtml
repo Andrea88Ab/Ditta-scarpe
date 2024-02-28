@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null; // Opzionale: Rimuove il layout per questa vista se desideri una pagina standalone
+}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Inclusione CSS di Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Stili personalizzati */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .centered-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-entra {
+            border-radius: 50%;
+            padding: 20px 40px;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .btn-entra:hover {
+                transform: scale(1.1);
+            }
+    </style>
+</head>
+<body>
+    <div class="centered-btn">
+        <!-- Bottone che utilizza le classi di Bootstrap e reindirizza alla vista degli articoli -->
+        <a href="@Url.Action("Index", "Articoli")" class="btn btn-primary btn-lg btn-entra">Entra</a>
+    </div>
+
+    <!-- Inclusione JS di Bootstrap (opzionale, se necessario per altri componenti Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

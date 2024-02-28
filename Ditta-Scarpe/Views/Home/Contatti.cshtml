@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Contatti";
+}
+
+<div class="container mt-4">
+    <h2>Contattaci</h2>
+    <p>Per qualsiasi informazione, non esitare a contattarci:</p>
+    <div class="mb-3">
+        <p>Email: info@scarpeandco.it</p>
+        <p>Telefono: 123 456 7890</p>
+    </div>
+
+    <h3>Modulo di Contatto</h3>
+    <form action="/contatti" method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="messaggio" class="form-label">Messaggio:</label>
+            <textarea class="form-control" id="messaggio" name="messaggio" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Invia</button>
+    </form>
+</div>

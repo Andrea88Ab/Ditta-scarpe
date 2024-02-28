@@ -1,0 +1,18 @@
+﻿@model Ditta_Scarpe.Models.Articolo
+
+@{
+    ViewBag.Title = "Dettagli Articolo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="card">
+    <img src="@Model.ImmagineCopertina" class="card-img-top" alt="Immagine di @Model.Nome">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Nome</h5>
+        <p class="card-text">@Model.Descrizione</p>
+        <p class="card-text"><strong>Prezzo:</strong> @Model.Prezzo €</p>
+    </div>
+</div>
+
+<a href="@Url.Action("Index", "Articoli")" class="btn btn-primary mt-3">Torna all'elenco</a>

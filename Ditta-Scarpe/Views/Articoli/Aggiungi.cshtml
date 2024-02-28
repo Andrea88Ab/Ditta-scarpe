@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Ditta_Scarpe.Models.Articolo>
+
+<div class="container mt-4">
+    <h2>Elenco Articoli</h2>
+    <a href="@Url.Action("Aggiungi", "Articoli")" class="btn btn-primary mb-2">Aggiungi Nuovo Articolo</a>
+    <div class="row">
+        @foreach (var articolo in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@articolo.ImmagineCopertina" class="card-img-top" alt="Immagine di @articolo.Nome">
+                    <div class="card-body">
+                        <h5 class="card-title">@articolo.Nome</h5>
+                        <p class="card-text">@articolo.Descrizione</p>
+                        <a href="@Url.Action("Dettagli", "Articoli", new { id = articolo.Id })" class="btn btn-secondary">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
